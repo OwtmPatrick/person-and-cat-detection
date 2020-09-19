@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "webpack",
+    "lint": "eslint --ext .js ./src ",
+    "lint:fix": "eslint --fix --ext .js ./src ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +21,9 @@
     "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^4.3.0",
     "cssnano": "^4.1.10",
+    "eslint": "^7.9.0",
+    "eslint-config-graph-base": "^4.0.1-alpha",
+    "eslint-plugin-import": "^2.22.0",
     "file-loader": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
     "less": "^3.12.2",

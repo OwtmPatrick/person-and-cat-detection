@@ -1,22 +1,22 @@
-const path = require("path");
-const CleanWebpackPlugin = require("clean-webpack-plugin").CleanWebpackPlugin;
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: "./src/main.js",
+	entry: './src/main.js',
 	output: {
-		path: path.resolve(__dirname, "dist"),
-		filename: "bundle-[hash].js",
+		path: path.resolve(__dirname, 'dist'),
+		filename: 'bundle-[hash].js'
 	},
 	resolve: {
-		extensions: [".ts", ".tsx", ".js"],
+		extensions: ['.js']
 	},
 	devServer: {
-		contentBase: "dist",
+		contentBase: 'dist',
 		compress: true,
-		port: 3000,
+		port: 3000
 	},
 	module: {
 		rules: [
@@ -36,49 +36,47 @@ module.exports = {
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							hmr: process.env.NODE_ENV === "development",
-						},
+							hmr: process.env.NODE_ENV === 'development'
+						}
 					},
-					"css-loader",
-					"postcss-loader",
-					"less-loader",
-				],
+					'css-loader',
+					'postcss-loader',
+					'less-loader'
+				]
 			},
 			{
 				test: /\.(svg|woff|woff2|ttf|eot|otf)([\?]?.*)$/,
-				loader: "file-loader?name=assets/fonts/[name].[ext]",
-			},
-		],
+				loader: 'file-loader?name=assets/fonts/[name].[ext]'
+			}
+		]
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
 		new CopyWebpackPlugin({
 			patterns: [
 				{
-					from: "src/index.html",
-					to: "./index.html",
+					from: 'src/index.html',
+					to: './index.html'
 				},
 				{
-					from: "src/assets/**/*",
-					to: "./assets",
-					transformPath: (targetPath) => {
-						return targetPath.replace("src/assets", "");
-					},
-				},
-			],
+					from: 'src/assets/**/*',
+					to: './assets',
+					transformPath: targetPath => targetPath.replace('src/assets', '')
+				}
+			]
 		}),
 		new HtmlWebpackPlugin({
-			template: "src/index.html",
+			template: 'src/index.html',
 			minify: {
 				collapseWhitespace: true,
 				removeComments: true,
 				removeRedundantAttributes: true,
-				useShortDoctype: true,
-			},
+				useShortDoctype: true
+			}
 		}),
 		new MiniCssExtractPlugin({
-			filename: "style-[hash].css",
-			allChunks: true,
-		}),
-	],
+			filename: 'style-[hash].css',
+			allChunks: true
+		})
+	]
 };

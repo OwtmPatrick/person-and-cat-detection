@@ -16,7 +16,7 @@
 		<div class="preload-section__title-wrapper" id="loading-indicator">
 			<h1 class="preload-section__title">Loading model</h1>
 
-			<div class="preload-section__dots"></div>
+			<div class="preload-section__dots dots"></div>
 		</div>
 
 		<button type="button" class="preload-section__button" id="webcamButton" disabled>Enable Webcam</button>
@@ -24,7 +24,11 @@
 
 	<section id="demos" class="demos invisible">
 		<div class="demos__inner">
-			<video id="webcam" autoplay width="500" height="500" class="demos__video"></video>
+			<div class="demos__video-wrapper">
+				<div class="demos__dots dots"></div>
+
+				<video id="webcam" autoplay width="500" height="375" class="demos__video"></video>
+			</div>
 
 			<div class="demos__predictions">
 				<div class="demos__progresses-wrapper">

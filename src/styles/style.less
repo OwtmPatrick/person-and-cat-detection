@@ -186,7 +186,32 @@ body {
 		width: 100%;
 		height: 25px;
 		-webkit-appearance: none;
+		-moz-appearance: none;
 		appearance: none;
+		border: none;
+		border-radius: 3px;
+	}
+
+	@-moz-document url-prefix() {
+		&__bar {
+			background-color: @orange-light;
+
+			&_cat-and-person {
+				background-color: @green-light;
+			}
+		}
+
+		&__bar::-moz-progress-bar {
+			border-radius: 3px;
+		}
+
+		&__bar::-moz-progress-bar {
+			background-color: @orange;
+		}
+
+		&__bar_cat-and-person::-moz-progress-bar {
+			background-color: @green;
+		}
 	}
 
 	&__bar::-webkit-progress-bar,

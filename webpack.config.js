@@ -77,5 +77,6 @@ module.exports = {
 			filename: 'style-[hash].css',
 			allChunks: true
 		})
-	]
+	],
+	devtool: 'source-map'
 };

@@ -1,3 +1,3 @@
-import './style.less';
+import './styles/style.less';
 
 import './app';

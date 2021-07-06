@@ -4,15 +4,45 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Webpack starter</title>
+	<title>Cat and person detection</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;1,400&display=swap"
+		rel="stylesheet">
 </head>
 
 <body>
-	<div class="wrapper">
-		<h1 class="wrapper__title">Happy Coding with</h1>
+	<section class="preload-section" id="preload-section">
+		<div class="preload-section__title-wrapper" id="loading-indicator">
+			<h1 class="preload-section__title">Loading model</h1>
 
-		<span class="wrapper__logo"></span>
-	</div>
+			<div class="preload-section__dots"></div>
+		</div>
+
+		<button type="button" class="preload-section__button" id="webcamButton" disabled>Enable Webcam</button>
+	</section>
+
+	<section id="demos" class="demos invisible">
+		<div class="demos__inner">
+			<video id="webcam" autoplay width="500" height="500" class="demos__video"></video>
+
+			<div class="demos__predictions">
+				<div class="demos__progresses-wrapper">
+					<div class="demos__progress progress">
+						<label class="progress__label">Me</label>
+
+						<progress class="progress__bar progress__bar_person" id="person-progress"></progress>
+					</div>
+
+					<div class="demos__progress progress">
+						<label class="progress__label">Me &#38 cat</label>
+
+						<progress class="progress__bar progress__bar_cat-and-person" id="cat-and-person-progress"></progress>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </body>
 
 </html>

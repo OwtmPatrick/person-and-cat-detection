@@ -35,5 +35,10 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs": "^3.7.0",
+    "@tensorflow/tfjs-backend-webgl": "^3.7.0"
   }
 }

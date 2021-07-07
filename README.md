@@ -27,4 +27,6 @@ npm run build
 
 You build will appear in <code>dist</code> folder
 
-## Static code analyze
+## Demo
+
+Also you can try this [demo](https://owtmpatrick.github.io/person-and-cat-detection)

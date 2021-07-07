@@ -1,10 +1,10 @@
-# Webpack starter kit
+# Person and cat detection
 
-A simple Starter Kit with babel and support using <code>.less</code> files
+A simple person and cat detection example based on [coco-ssd model](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd) of [tensorflow js](https://www.tensorflow.org/js)
 
 ## Start
 
-1. Clone [repo](https://github.com/OwtmPatrick/webpack-starter)
+1. Clone [repo](https://github.com/OwtmPatrick/person-and-cat-detection)
 2. Install packages
 
 ```
@@ -19,26 +19,12 @@ npm run start
 
 ## Build
 
-Run following command to build your source:
+Run following command to make build from source:
 
 ```
 npm run build
 ```
 
-And go to <code>dist</code> folder
+You build will appear in <code>dist</code> folder
 
 ## Static code analyze
-
-You can run eslint for static code analyzing:
-
-### JavaScript
-
-```
-npm run lint
-```
-
-also you can use <code>--fix</code> flag for autofixing if it is possible:
-
-```
-npm run lint:fix
-```

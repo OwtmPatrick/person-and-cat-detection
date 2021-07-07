@@ -58,9 +58,8 @@ module.exports = {
 					to: './index.html'
 				},
 				{
-					from: 'src/assets/**/*',
-					to: './assets',
-					transformPath: targetPath => targetPath.replace('src/assets', '')
+					from: 'src/assets/icons',
+					to: './assets/icons'
 				}
 			]
 		}),

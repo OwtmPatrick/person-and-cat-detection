@@ -1,0 +1,215 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: #F8F9FA;
+  font-family: 'Roboto Mono', monospace;
+}
+.dots,
+.dots:before,
+.dots:after {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #000000;
+  animation: dots 0.5s infinite linear alternate;
+}
+.dots {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  animation-delay: 0.25s;
+}
+.dots:before,
+.dots:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dots:before {
+  left: -10px;
+  animation-delay: 0s;
+}
+.dots:after {
+  left: 10px;
+  animation-delay: 0.5s;
+}
+.preload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 40px;
+}
+.preload-section__title-wrapper {
+  display: flex;
+  align-items: flex-end;
+  transition: opacity 0.3s;
+}
+.preload-section__title-wrapper.hidden {
+  opacity: 0;
+}
+.preload-section__title {
+  margin: 0;
+}
+.preload-section__button {
+  position: relative;
+  margin-top: 20px;
+  padding: 13px 50px 13px;
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 32px;
+  letter-spacing: 1px;
+  outline: 0;
+  border: 1px solid #000000;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+}
+.preload-section__button:disabled {
+  cursor: no-drop;
+}
+.preload-section__button:after {
+  content: '';
+  background-color: #ffe54c;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+.preload-section__button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+.demos {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 16px;
+}
+.demos__inner {
+  width: 100%;
+  max-width: 550px;
+}
+.demos__dots {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.demos__video-wrapper {
+  position: relative;
+  width: calc(100% - 50px);
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.demos__video-wrapper:before {
+  content: '';
+  display: block;
+  padding-top: calc(1 / 1.33333333 * 100%);
+}
+.demos__video {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  display: block;
+  border-radius: 7px;
+}
+.demos__predictions {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: calc(100% - 50px);
+  margin-left: 50px;
+  margin-top: -50px;
+  padding: 16px 24px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.demos__progresses-wrapper {
+  margin: -12px 0;
+}
+.progress {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 12px 0;
+  height: 30px;
+  border-radius: 5px;
+}
+.progress__label {
+  min-width: 80px;
+  margin-right: 15px;
+  text-align: right;
+}
+.progress__bar {
+  width: 100%;
+  height: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 3px;
+}
+@-moz-document url-prefix() {
+  .progress__bar {
+    background-color: #ffcda6;
+  }
+  .progress__bar_cat-and-person {
+    background-color: #a6ffe2;
+  }
+  .progress__bar::-moz-progress-bar {
+    border-radius: 3px;
+  }
+  .progress__bar::-moz-progress-bar {
+    background-color: #ff8d00;
+  }
+  .progress__bar_cat-and-person::-moz-progress-bar {
+    background-color: #5fe4b9;
+  }
+}
+.progress__bar::-webkit-progress-bar,
+.progress__bar::-webkit-progress-value {
+  border-radius: 3px;
+}
+.progress__bar_person::-webkit-progress-bar {
+  background-color: #ffcda6;
+}
+.progress__bar_cat-and-person::-webkit-progress-bar {
+  background-color: #a6ffe2;
+}
+.progress__bar_person::-webkit-progress-value {
+  background-color: #ff8d00;
+}
+.progress__bar_cat-and-person::-webkit-progress-value {
+  background-color: #5fe4b9;
+}
+.invisible {
+  display: none;
+}
+@keyframes dots {
+  0% {
+    background-color: #000000;
+  }
+  50%,
+  100% {
+    background-color: #b1afaf;
+  }
+}
+
+
+/*# sourceMappingURL=style-5fbfc887fcfbcc2d3121.css.map*/
